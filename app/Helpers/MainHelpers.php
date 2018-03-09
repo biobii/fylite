@@ -144,6 +144,14 @@
     }
 
     /**
+     * 
+     */
+    function inputFile($value)
+    {
+        return isset($_FILES[$value]) ? $_FILES[$value] : false;
+    }
+
+    /**
      * Redirect to specific url
      * @param string $url
      * @return header
