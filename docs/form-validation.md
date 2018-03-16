@@ -41,7 +41,7 @@ if ($validator->fails()) {
 <?php endif; ?>
 
 <form action="<?php echo basepath() . '/login' ?>" method="POST>
-    <?php echo csrf_token() ?>
+    <?php csrf_token() ?>
     <input type="text" name="email">
     <input type="password" name="password">
     <button type="submit">

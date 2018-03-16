@@ -8,7 +8,7 @@ All controllers are stored in the `app/Controllers` directory. For create new co
 
 namespace App\Controllers;
 
-use App\Models\User
+use App\Models\User;
 
 class UserController extends Controller
 {
