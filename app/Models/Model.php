@@ -8,6 +8,7 @@ class Model
 {
 
     protected $db = null;
+    protected $table;
 
     private $driver;
     private $host;

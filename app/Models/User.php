@@ -4,13 +4,16 @@ namespace App\Models;
 
 class User extends Model
 {
-    private $table = 'users';
-    
-    public function getUserByEmail($email)
+
+    public function __construct()
     {
-        return $this->db->select()->from('users')
-                        ->where('email', '=', $email)
-                        ->execute()->fetch();
+        $this->table = 'users';
+    }
+    
+    public function all()
+    {
+        return $this->db->select()->from($this->table)
+                        ->execute()->fetchAll();
     }
 
 }
