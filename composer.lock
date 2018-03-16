@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "defb4dc2a5b0f3a871435beeb31813df",
     "content-hash": "b50f4c2522a5dc752552c02e38b294ab",
     "packages": [
         {
@@ -50,7 +51,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2018-02-13T20:26:39+00:00"
+            "time": "2018-02-13 20:26:39"
         },
         {
             "name": "slim/pdo",
@@ -96,7 +97,7 @@
                 "pdo",
                 "slim"
             ],
-            "time": "2017-08-15T10:42:44+00:00"
+            "time": "2017-08-15 10:42:44"
         }
     ],
     "packages-dev": [],

@@ -7,7 +7,7 @@ use App\Core\Validation;
 class Controller
 {
 
-    protected $model, $validation;
+    protected $model, $validation, $auth;
 
     public function __construct()
     {

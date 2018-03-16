@@ -20,7 +20,7 @@
      */
     function asset($file)
     {
-        echo basepath() . $file;
+        echo basepath() . '/' . $file;
     }
 
     /**
@@ -35,7 +35,7 @@
 
     function basepath()
     {
-        return 'http://localhost:3000/';
+        return 'http://localhost:3000';
     }
 
     /**

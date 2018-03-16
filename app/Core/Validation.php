@@ -94,6 +94,9 @@ class Validation
 
     public function fails()
     {
+        if (! empty($this->_errors)) {
+            $_SESSION['form_errors_validation'] = $this->errors();
+        }
         return !$this->_passed;
     }
 
