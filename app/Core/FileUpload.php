@@ -21,6 +21,7 @@ class FileUpload
     {
         $this->_file = $file;
         $this->_tmpname = $this->_file['tmp_name'];
+        $this->_path = __DIR__ . '/../../public/storage/';
         return $this;
     }
 
@@ -45,7 +46,7 @@ class FileUpload
                 $this->_name = $this->_file['name'];
             }
             move_uploaded_file($this->_tmpname, $this->_path . $this->_name);
-            return $this->_name . $this->_format;
+            return $this->_name;
         }
         return $this->getErrors();
     }
@@ -71,7 +72,7 @@ class FileUpload
                         if (isset($this->_name)) {
                             $name = $this->_name;
                         }
-                        if (! file_exists($this->_path . $name . $this->_format)) {
+                        if (! file_exists($this->_path . $name)) {
                             return true;
                         } else {
                             $this->addError('File already exists!');
