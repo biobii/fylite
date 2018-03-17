@@ -33,7 +33,9 @@ To passing data into view, use `view method` and put the data on second paramete
 ## Related Documentation
 * [Routing](https://github.com/biobii/fylite/blob/master/docs/routing.md)
 * [Model](https://github.com/biobii/fylite/blob/master/docs/model.md)
+* [View](https://github.com/biobii/fylite/blob/master/docs/view.md)
 * [Simple Form Validation](https://github.com/biobii/fylite/blob/master/docs/form-validation.md)
+* [File Upload](https://github.com/biobii/fylite/blob/master/docs/file-upload.md)
 
 Back to [Home](https://github.com/biobii/fylite)
 

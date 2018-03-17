@@ -6,7 +6,8 @@ FYLite provides simple useful form validation. Validation rules are incomplete b
 
 ### Defined rules validation
 ```
-public function post() {
+public function post()
+{
     $validator = $this->validation->check([
         'email' => [
             'required' => true,
@@ -22,7 +23,8 @@ public function post() {
 
 ### Check validation status
 ```
-if ($validator->fails()) {
+if ($validator->fails())
+{
     // validation failed
     return redirectBack(); // redirect back to form view
 }

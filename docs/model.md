@@ -6,14 +6,16 @@ Model is used to access data on the database. All models are stored in the `app/
 
 ### Define the table name
 ```
-public function __construct() {
+public function __construct()
+{
     $this->table = 'users';
 }
 ```
 
 ### Create function for database operation
 ```
-public function all() {
+public function all()
+{
     return $this->db->select()->from($this->table)
                     ->execute()->fetchAll();
 }

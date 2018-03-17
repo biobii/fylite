@@ -5,12 +5,14 @@ FY Lite is mini MVC framework for small application. Lite, simple and easy to us
 ## Documentation
 
 ### Basic Installation
-After clone, setup your database configuration on `config/app.php`. Change the basepath on `basepath() method` located on `app/Helpers/MainHelpers.php`.
+After clone, run `composer update` and setup your database configuration on `config/app.php`. Change the basepath on located on `app/Helpers/MainHelpers.php`.
 
  * [Routing](https://github.com/biobii/fylite/blob/master/docs/routing.md)
  * [Controller](https://github.com/biobii/fylite/blob/master/docs/controller.md)
  * [Model](https://github.com/biobii/fylite/blob/master/docs/model.md)
  * [Simple Form Validation](https://github.com/biobii/fylite/blob/master/docs/form-validation.md)
+ * [View](https://github.com/biobii/fylite/blob/master/docs/view.md)
+ * [File Upload](https://github.com/biobii/fylite/blob/master/docs/file-upload.md)
 
 ## Credits
 
