@@ -20,7 +20,12 @@
      */
     function asset($file)
     {
-        echo basepath() . '/' . $file;
+        $basepath = basepath();
+        if (substr($basepath, -1) != '/') {
+            $basepath .= '/';
+        }
+
+        echo $basepath . $file;
     }
 
     /**
@@ -35,7 +40,8 @@
 
     function basepath()
     {
-        return 'http://localhost:3000';
+        $http = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https://' : 'http://';
+        return $http . $_SERVER['HTTP_HOST'];
     }
 
     /**
@@ -189,6 +195,20 @@
     function setErrorsValidation($errors)
     {
         $_SESSION['form_errors_validation'] = $errors;
+    }
+
+    /**
+     * Direct to url destination
+     * @param string $route
+     */
+    function myurl($route = '')
+    {
+        $basepath = basepath();
+        if (substr($basepath, -1) != '/') {
+            $basepath .= '/';
+        }
+
+        echo $basepath . $route;
     }
 
     /**

@@ -1,6 +1,6 @@
 # FY Lite
 
-FY Lite is mini MVC framework for small application. Lite, simple and easy to use. Inspired by Laravel and Codeigniter.
+FYLite is mini MVC framework for small application. Lite, simple and easy to use. Inspired by Laravel and Codeigniter.
 
 ## Documentation
 

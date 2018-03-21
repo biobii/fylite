@@ -2,7 +2,9 @@
 
 namespace App\Core;
 
-class Validation
+use App\Models\Model;
+
+class Validation extends Model
 {
 
     private $_passed = false;
@@ -65,6 +67,16 @@ class Validation
                     case 'email':
                         if (! filter_var(input($field), FILTER_VALIDATE_EMAIL)) {
                             $this->addError($field . ' is not valid.');
+                        }
+                        break;
+                    
+                    case 'unique':
+                        parent::__construct();
+                        $check = $this->db->select([$field])->from($rule_value)
+                                            ->where($field, '=', input($field))
+                                            ->execute()->fetch();
+                        if ($check) {
+                            $this->addError($field . ' is already taken.');
                         }
                         break;
 
