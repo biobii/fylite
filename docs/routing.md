@@ -17,7 +17,19 @@ Remember base namespace of controllers is `App\Controllers`, so if you want to p
 $route->get('/hello', 'YourFolder\YourController@yourMethod');
 ```
 
-## More Route Documentation
+### Set Route Parameter
+```
+// route.php
+$route->get('/hello/{name}', 'ExampleController@greet');
+
+// ExampleController.php
+public function greet($name)
+{
+    echo $name;
+}
+```
+
+## Complete Routing Documentation
 For more route documentation can be read on [FastRoute](https://github.com/nikic/FastRoute).
 
 ## Related Documentation

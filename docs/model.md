@@ -21,7 +21,7 @@ public function all()
 }
 ```
 
-### Complete Example Code
+### Completed code example
 ```
 <?php
 
@@ -41,7 +41,7 @@ class User extends Model
     }
 }
 ```
-FYLite use PDO database library by Slim-PDO for database operation. For complete documentation about database operation can be read on [Slim-PDO Documentation](https://github.com/FaaPz/Slim-PDO/blob/master/docs/README.md).
+FYLite use PDO database library by Slim-PDO for database operation. For completed documentation about database operation can be read on [Slim-PDO Documentation](https://github.com/FaaPz/Slim-PDO/blob/master/docs/README.md).
 
 ## Related Documentation
 * [Controller](https://github.com/biobii/fylite/blob/master/docs/controller.md)

@@ -7,7 +7,7 @@ FYLite provides a simple file upload feature. By default upload files are placed
 ### Form View
 ```
 // upload-example.view.php
-<form action="<?php echo basepath() . '/upload' ?>" method="POST" enctype="multipart/form-data">
+<form action="<?php myurl('upload') ?>" method="POST" enctype="multipart/form-data">
     <?php csrf_token() ?>
     <input type="file" name="myFile" class="form-control">
     <button type="submit">

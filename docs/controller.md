@@ -28,7 +28,7 @@ class UserController extends Controller
 ```
 Based on the example code above, you should call base controller on constructor. If you want to use model, you can instance model on constructor also.
 
-To passing data into view, use `view method` and put the data on second parameter as associative array.
+To passing data into view, use `view` method and put the data on second parameter as associative array.
 
 ## Related Documentation
 * [Routing](https://github.com/biobii/fylite/blob/master/docs/routing.md)

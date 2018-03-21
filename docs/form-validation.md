@@ -29,10 +29,10 @@ if ($validator->fails())
     return redirectBack(); // redirect back to form view
 }
 
-// validation passed
+// validation passed, continue proccess
 ```
 
-### Display validation errors message on view
+### Display errors message on view
 ```
 // views/login.view.php
 
@@ -42,7 +42,7 @@ if ($validator->fails())
     <?php endforeach;
 <?php endif; ?>
 
-<form action="<?php echo basepath() . '/login' ?>" method="POST>
+<form action="<?php myurl('login') ?>" method="POST">
     <?php csrf_token() ?>
     <input type="text" name="email">
     <input type="password" name="password">
@@ -52,15 +52,28 @@ if ($validator->fails())
 </form>
 ```
 
+### Unique rule validation
+```
+public function register()
+{
+    $validator = $this->validation->check([
+        'email' => [
+            'unique' => 'users' // email should be unique on users table
+        ]
+    ]);
+}
+```
+
 ## Available Validation Rules
-* required - Field can't be empty.
-* min - Define minimum characters of field.
-* max - Define maximum characters of field.
-* string - Input field should be string.
-* numeric - Input field should be numeric.
-* integer - Input field should be integer.
-* boolean - Input field should be boolean.
-* array - Input field should be an array.
+* required - field can't be empty.
+* min - define minimum characters of field.
+* max - define maximum characters of field.
+* string - input field should be string.
+* numeric - input field should be numeric.
+* integer - input field should be integer.
+* boolean - input field should be boolean.
+* array - input field should be an array.
+* unique - filter existing data in specific table.
 
 ## Related Documentation
 * [Controller](https://github.com/biobii/fylite/blob/master/docs/controller.md)

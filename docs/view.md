@@ -33,15 +33,20 @@ public function hello()
 <p>I'm <?php echo $data['age'] ?> years old</p>   
 ```
 
-### Load assets
+### Load assets and go to specific URL
 FYLite has a helper that makes it easy to call asset files in public folder.
 ```
+// load assets
 <head>
     <title>FYLite</title>
     <link rel="stylesheet" href="<?php asset('css/style.css') ?>">
 </head>
+
+// go to specific URL
+<form action="<?php myurl('login') ?>" method="POST">
+    //
+</form>
 ```
-Before do that, please configure your basepath on MainHelpers file.
 
 ## Related Documentation
 * [Controller](https://github.com/biobii/fylite/blob/master/docs/controller.md)
