@@ -5,7 +5,7 @@ Model is used to access data on the database. All models are stored in the `app/
 ## Basic Usage
 
 ### Define the table name
-```
+```php
 public function __construct()
 {
     parent::__construct();
@@ -14,7 +14,7 @@ public function __construct()
 ```
 
 ### Create function for database operation
-```
+```php
 public function all()
 {
     return $this->db->select()->from($this->table)
@@ -23,7 +23,7 @@ public function all()
 ```
 
 ### Completed code example
-```
+```php
 <?php
 
 namespace App\Models;

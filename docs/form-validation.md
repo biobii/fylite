@@ -5,7 +5,7 @@ FYLite provides simple useful form validation. Validation rules are incomplete b
 ## Basic Usage
 
 ### Defined rules validation
-```
+```php
 public function post()
 {
     $validator = $this->validation->check([
@@ -22,7 +22,7 @@ public function post()
 ```
 
 ### Unique rule validation
-```
+```php
 public function register()
 {
     $validator = $this->validation->check([
@@ -34,7 +34,7 @@ public function register()
 ```
 
 ### Check validation status
-```
+```php
 if ($validator->fails())
 {
     // validation failed
@@ -45,7 +45,7 @@ if ($validator->fails())
 ```
 
 ### Display errors message on view
-```
+```php
 // views/login.view.php
 
 <?php if (hasErrorsValidation) :

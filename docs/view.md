@@ -5,7 +5,7 @@ All views are stored in the `views` directory. For create the new view file don'
 ## Basic Usage
 
 ### Call view from controller
-```
+```php
 // some-controller.php
 
 public function hello()
@@ -15,7 +15,7 @@ public function hello()
 ```
 
 ### Passing data from controller to view
-```
+```php
 public function hello()
 {
     $name = 'Biobii';
@@ -26,7 +26,7 @@ public function hello()
 ```
 
 ### Displaying data
-```
+```php
 // awesome.view.php
 
 <p>My name is <?php echo $data['name'] ?></p>
@@ -35,7 +35,7 @@ public function hello()
 
 ### Load assets and go to specific URL
 FYLite has a helper that makes it easy to call asset files in public folder.
-```
+```php
 // load assets
 <head>
     <title>FYLite</title>

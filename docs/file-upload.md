@@ -5,7 +5,7 @@ FYLite provides a simple file upload feature. By default upload files are placed
 ## Basic Usage
 
 ### Form View
-```
+```php
 // upload-example.view.php
 <form action="<?php myurl('upload') ?>" method="POST" enctype="multipart/form-data">
     <?php csrf_token() ?>
@@ -17,7 +17,7 @@ FYLite provides a simple file upload feature. By default upload files are placed
 ```
 
 ### Uploading File
-```
+```php
 public function upload()
 {
     csrf_check(); // check csrf token

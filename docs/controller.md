@@ -3,7 +3,7 @@
 All controllers are stored in the `app/Controllers` directory. For create new contoller just duplicate `ExampleController.php` and name it as you want.
 
 ## Basic Usage
-```
+```php
 <?php
 
 namespace App\Controllers;
