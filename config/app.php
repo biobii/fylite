@@ -11,7 +11,8 @@ $config['development'] = true;
 /*--------------------------------------------------------------------------------------------------
  * Setting database
  * -------------------------------------------------------------------------------------------------
- */ 
+ */
+$config['database']['connection'] = false; 
 $config['database']['driver']   = 'mysql';
 $config['database']['host']     = 'localhost';
 $config['database']['dbname']   = 'fylite';

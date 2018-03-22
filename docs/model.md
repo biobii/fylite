@@ -8,6 +8,7 @@ Model is used to access data on the database. All models are stored in the `app/
 ```
 public function __construct()
 {
+    parent::__construct();
     $this->table = 'users';
 }
 ```
@@ -31,6 +32,7 @@ class User extends Model
 {
     public function __construct()
     {
+        parent::__construct();
         $this->table = 'users';
     }
     
