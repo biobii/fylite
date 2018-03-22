@@ -150,11 +150,23 @@
     }
 
     /**
-     * 
+     * Grab input file value.
+     * @param mix $value
+     * @return mix $value
      */
     function inputFile($value)
     {
         return isset($_FILES[$value]) ? $_FILES[$value] : false;
+    }
+
+    /**
+     * Displaying old input after failed form validation.
+     */
+    function old($field)
+    {
+        $old = $_SESSION['old_input'][$field];
+        echo $old;
+        unset($old);
     }
 
     /**

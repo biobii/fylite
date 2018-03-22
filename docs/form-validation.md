@@ -21,6 +21,18 @@ public function post()
 }
 ```
 
+### Unique rule validation
+```
+public function register()
+{
+    $validator = $this->validation->check([
+        'email' => [
+            'unique' => 'users' // email should be unique on users table
+        ]
+    ]);
+}
+```
+
 ### Check validation status
 ```
 if ($validator->fails())
@@ -44,25 +56,14 @@ if ($validator->fails())
 
 <form action="<?php myurl('login') ?>" method="POST">
     <?php csrf_token() ?>
-    <input type="text" name="email">
-    <input type="password" name="password">
+    <input type="text" name="email" value="<?php old('email') ?>">
+    <input type="password" name="password" value="<?php old('password') ?>">
     <button type="submit">
         Login
     </button>
 </form>
 ```
-
-### Unique rule validation
-```
-public function register()
-{
-    $validator = $this->validation->check([
-        'email' => [
-            'unique' => 'users' // email should be unique on users table
-        ]
-    ]);
-}
-```
+Use `old` helper for keep input value.
 
 ## Available Validation Rules
 * required - field can't be empty.

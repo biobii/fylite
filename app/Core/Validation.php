@@ -9,6 +9,7 @@ class Validation extends Model
 
     private $_passed = false;
     private $_errors = [];
+    private $_input = [];
 
     public function check($fields = [])
     {
@@ -85,6 +86,8 @@ class Validation extends Model
                 }
 
             }
+            // remember old input
+            $this->oldInput($field, input($field));
         }
 
         if (empty($this->_errors)) {
@@ -110,6 +113,11 @@ class Validation extends Model
             $_SESSION['form_errors_validation'] = $this->errors();
         }
         return !$this->_passed;
+    }
+
+    private function oldInput($field, $value)
+    {
+        $_SESSION['old_input'][$field] = $value;
     }
 
 }
