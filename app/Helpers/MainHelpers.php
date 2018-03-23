@@ -1,5 +1,7 @@
 <?php
 
+use Jenssegers\Blade\Blade;
+
     /**
      * Call errors view on views folder
      * @param string $file
@@ -8,10 +10,10 @@
      */
     function abort($file, $data = [])
     {
-        $path = __DIR__ . '/../../views/errors/' . $file . '.php';
-        if (file_exists($path))
-            return require $path;
-        return die('View ' . $file . ' not found!');
+        $path = __DIR__ . '/../../views/errors/';
+        $blade = new Blade($path, $path.'../public/storage/cache');
+
+        echo $blade->make($file, $data);
     }
 
     /**
@@ -231,8 +233,8 @@
      */
     function view($file, $data = [])
     {
-        $path = __DIR__ . '/../../views/' . $file . '.view.php';
-        if (file_exists($path))
-            return require $path;
-        return die('View ' . $file . ' not found!');
+        $path = __DIR__ . '/../../views/';
+        $blade = new Blade($path, $path.'../public/storage/cache');
+
+        echo $blade->make($file, $data);
     }

@@ -7,7 +7,7 @@ class ExampleController extends Controller
 
     public function welcome()
     {
-        return view('welcome');
+        return view('welcome', ['hello' => 'FYLite']);
     }
 
 }

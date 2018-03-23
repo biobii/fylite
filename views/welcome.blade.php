@@ -29,7 +29,7 @@
 <body>
     
     <div class="wrapper">
-        <h1>Welcome to FY Lite</h1>
+        <h1>Welcome to {{ $hello }}</h1>
         <h4>Let's code with love!</h4>
     </div>
 
