@@ -24,6 +24,12 @@
         "slim/pdo": "~1.10",
         "jenssegers/blade": "^1.1"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/biobii/fylite"
+        }
+    ],
     "scripts": {
         "serve": "php -S localhost:3000 -t public"
     },
