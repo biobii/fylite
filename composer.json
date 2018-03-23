@@ -30,9 +30,6 @@
             "url": "https://github.com/biobii/fylite"
         }
     ],
-    "scripts": {
-        "serve": "php -S localhost:3000 -t public"
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

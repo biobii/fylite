@@ -17,4 +17,4 @@ $config['database']['driver']   = 'mysql';
 $config['database']['host']     = 'localhost';
 $config['database']['dbname']   = 'fylite';
 $config['database']['username'] = 'root';
-$config['database']['password'] = 'mysql';
+$config['database']['password'] = 'root';
