@@ -27,7 +27,7 @@ use Jenssegers\Blade\Blade;
             $basepath .= '/';
         }
 
-        echo $basepath . $file;
+        return $basepath . $file;
     }
 
     /**
@@ -89,7 +89,7 @@ use Jenssegers\Blade\Blade;
     {
         $base_token = 'ghsyGsnHks02Vt3bYb2YbjO217bBSjLD7M31mhSfLksGjhbUisG28Sb2gsndk8nBsjGs63hs7S';
         $_SESSION['csrf_token'] = str_shuffle(str_shuffle($base_token));
-        echo '<input type="hidden" name="_token" value="' . $_SESSION['csrf_token'] . '">';
+        return '<input type="hidden" name="_token" value="' . $_SESSION['csrf_token'] . '">';
     }
 
     /**
@@ -167,8 +167,8 @@ use Jenssegers\Blade\Blade;
     function old($field)
     {
         $old = $_SESSION['old_input'][$field];
-        echo $old;
-        unset($old);
+        unset($_SESSION['old_input'][$field]);
+        return $old;
     }
 
     /**
@@ -222,7 +222,7 @@ use Jenssegers\Blade\Blade;
             $basepath .= '/';
         }
 
-        echo $basepath . $route;
+        return $basepath . $route;
     }
 
     /**

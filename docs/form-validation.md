@@ -46,18 +46,18 @@ if ($validator->fails())
 
 ### Display errors message on view
 ```php
-// views/login.view.php
+// views/login.blade.php
 
-<?php if (hasErrorsValidation) :
-    foreach (getErrorsValidation() as $error) : ?>
-        <li><?php echo $error ?></li>
-    <?php endforeach;
-<?php endif; ?>
+@if (hasErrorsValidation) 
+    @foreach (getErrorsValidation() as $error)
+        <li>{{ $error }}</li>
+    @endforeach
+@endif
 
-<form action="<?php myurl('login') ?>" method="POST">
-    <?php csrf_token() ?>
-    <input type="text" name="email" value="<?php old('email') ?>">
-    <input type="password" name="password" value="<?php old('password') ?>">
+<form action="{{ myurl('login') }}" method="POST">
+    {!! csrf_token() !!} 
+    <input type="text" name="email" value="{{ old('email') }}">
+    <input type="password" name="password" value="{{ old('password') }}">
     <button type="submit">
         Login
     </button>

@@ -18,4 +18,5 @@ Download or clone FYLite repository, run `composer update`. For setup your datab
 ## Credits
 
 * [FastRoute](https://github.com/nikic/FastRoute) - Fast request router for PHP
+* [Blade](https://github.com/jenssegers/blade) -  A standalone version of Laravel's Blade templating engine for use outside of Laravel
 * [Slim-PDO](https://github.com/FaaPz/Slim-PDO) - PDO database library for Slim framework

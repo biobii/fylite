@@ -22,7 +22,7 @@ class UserController extends Controller
     {
         $user = $this->model->all();
         $hello = 'Hello World';
-        return view('users/index', ['user' => $user, 'hello' => $hello]);
+        return view('users.index', ['user' => $user, 'hello' => $hello]);
     }
 }
 ```
