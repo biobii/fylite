@@ -3,8 +3,15 @@
 FYLite is mini MVC framework for small application. Lite, simple and easy to use. Inspired by Laravel and Codeigniter.
 
 ## Basic Installation
+
 Requires PHP 5.6 or above.
-Download or clone FYLite repository, run `composer update`. For setup your database configuration just edit file on `config/app.php`. Don't forget to set `$config['database']['connection'] = true`.
+Download or clone FYLite repository, run `composer update`.
+
+Or you can install with composer.
+```
+composer create-project --prefer-dist biobii/fylite blog
+```
+For setup database configuration just edit file on `config/app.php`. Don't forget to set `$config['database']['connection'] = true`.
 
 ## Documentation
 
