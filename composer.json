@@ -3,6 +3,7 @@
     "description": "FYLite is mini MVC framework for small application. Lite, simple and easy to use.",
     "keywords": ["mvc", "framework", "lite"],
     "license": "MIT",
+    "type": "project",
     "authors": [
         {
             "name": "Biobii",
@@ -26,5 +27,6 @@
     "scripts": {
         "serve": "php -S localhost:3000 -t public"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
