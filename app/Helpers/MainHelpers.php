@@ -1,6 +1,6 @@
 <?php
 
-use Jenssegers\Blade\Blade;
+    use Jenssegers\Blade\Blade;
 
     /**
      * Call errors view on views folder
@@ -174,7 +174,7 @@ use Jenssegers\Blade\Blade;
     /**
      * Redirect to specific url
      * @param string $url
-     * @return header
+     * @return void
      */
     function redirect($url)
     {
@@ -183,7 +183,8 @@ use Jenssegers\Blade\Blade;
     }
 
     /**
-     * Redirect to previous url
+     * Redirect to previous url.
+     * @return void
      */
     function redirectBack()
     {

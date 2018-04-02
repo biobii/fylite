@@ -21,7 +21,7 @@ public function hello()
     $name = 'Biobii';
     $age = 20;
 
-    return view('awesome', ['name' => $name, 'age' => $age]);
+    return view('welcome', ['name' => $name, 'age' => $age]);
 }
 ```
 
