@@ -6,15 +6,15 @@
  * FALSE for Production
  * -------------------------------------------------------------------------------------------------
  */
-$config['development'] = true;
+$config['development'] = env('APP_DEBUG', true);
 
 /*--------------------------------------------------------------------------------------------------
  * Setting database
  * -------------------------------------------------------------------------------------------------
  */
-$config['database']['connection'] = false; 
-$config['database']['driver']   = 'mysql';
-$config['database']['host']     = 'localhost';
-$config['database']['dbname']   = 'fylite';
-$config['database']['username'] = 'root';
-$config['database']['password'] = 'root';
+$config['database']['connection']   = env('DB_CONNECTION', false); 
+$config['database']['driver']       = env('DB_DRIVER', 'mysql');
+$config['database']['host']         = env('DB_HOST', 'localhost');
+$config['database']['username']     = env('DB_USER', 'root');
+$config['database']['password']     = env('DB_PASSWORD', '');
+$config['database']['dbname']       = env('DB_NAME', 'fylite');

@@ -2,6 +2,13 @@
 
 namespace App\Core;
 
+/**
+ * ------------------
+ * --- EXPERIMENT ---
+ * ------------------
+ * I'm not sure with this code, but you can try :D
+ */
+
 class Auth
 {
 
@@ -16,7 +23,7 @@ class Auth
         } else {
             $_SESSION['auth_id'] = $user_info[0];
         }
-        
+
         $this->id = $_SESSION['auth_id'];
     }
 

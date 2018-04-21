@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace FYLite;
 
 use Slim\PDO\Database;
 
@@ -24,15 +24,15 @@ class Model
 
     private function setup()
     {
-        require __DIR__ . '/../../config/app.php';
+        require __DIR__ . '/../config/app.php';
 
         if ($config['database']['connection']) {
-            $this->driver   = $config['database']['driver'];
-            $this->host     = $config['database']['host'];
-            $this->dbname   = $config['database']['dbname'];
-            $this->dbuser   = $config['database']['username'];
-            $this->dbpass   = $config['database']['password'];
-    
+            $this->driver = $config['database']['driver'];
+            $this->host = $config['database']['host'];
+            $this->dbname = $config['database']['dbname'];
+            $this->dbuser = $config['database']['username'];
+            $this->dbpass = $config['database']['password'];
+
             $this->dsn = "$this->driver:host=$this->host;dbname=$this->dbname;charset=utf8";
             return true;
         }

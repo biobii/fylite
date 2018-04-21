@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core;
+namespace FYLite;
 
 class FileUpload
 {
@@ -21,7 +21,7 @@ class FileUpload
     {
         $this->_file = $file;
         $this->_tmpname = $this->_file['tmp_name'];
-        $this->_path = __DIR__ . '/../../public/storage/';
+        $this->_path = __DIR__ . '/../public/storage/';
         return $this;
     }
 
@@ -34,7 +34,7 @@ class FileUpload
 
     public function pathTo($path)
     {
-        $this->_path = __DIR__ . '/../../public/storage/' . $path . '/';
+        $this->_path = __DIR__ . '/../public/storage/' . $path . '/';
         $this->_format = pathinfo($this->_file['name'], PATHINFO_EXTENSION);
         return $this;
     }
@@ -72,7 +72,7 @@ class FileUpload
                         if (isset($this->_name)) {
                             $name = $this->_name;
                         }
-                        if (! file_exists($this->_path . $name)) {
+                        if (!file_exists($this->_path . $name)) {
                             return true;
                         } else {
                             $this->addError('File already exists!');

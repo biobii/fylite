@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use FYLite\Controller;
+
 class ExampleController extends Controller
 {
 

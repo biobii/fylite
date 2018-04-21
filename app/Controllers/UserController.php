@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\User;
+use FYLite\Controller;
 
 class UserController extends Controller
 {

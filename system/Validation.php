@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Core;
-
-use App\Models\Model;
+namespace FYLite;
 
 class Validation extends Model
 {
@@ -28,7 +26,7 @@ class Validation extends Model
                             $this->addError($field . ' minimum ' . $rule_value . ' characters.');
                         }
                         break;
-                    
+
                     case 'max':
                         if (strlen(input($field)) > $rule_value) {
                             $this->addError($field . ' maximum ' . $rule_value . ' characters.');
@@ -42,11 +40,11 @@ class Validation extends Model
                         break;
 
                     case 'numeric':
-                        if (! is_numeric(input($field)) && $rule_value == true) {
+                        if (!is_numeric(input($field)) && $rule_value == true) {
                             $this->addError($field . ' should be numeric.');
                         }
                         break;
-                    
+
                     case 'integer':
                         if (gettype(input($field)) != 'integer' && $rule_value == true) {
                             $this->addError($field . ' should be integer.');
@@ -58,24 +56,24 @@ class Validation extends Model
                             $this->addError($field . ' should be boolean.');
                         }
                         break;
-                    
+
                     case 'array':
                         if (gettype(input($field)) != 'array' && $rule_value == true) {
                             $this->addError($field . ' should be an array.');
                         }
                         break;
-                    
+
                     case 'email':
-                        if (! filter_var(input($field), FILTER_VALIDATE_EMAIL)) {
+                        if (!filter_var(input($field), FILTER_VALIDATE_EMAIL)) {
                             $this->addError($field . ' is not valid.');
                         }
                         break;
-                    
+
                     case 'unique':
                         parent::__construct();
                         $check = $this->db->select([$field])->from($rule_value)
-                                            ->where($field, '=', input($field))
-                                            ->execute()->fetch();
+                            ->where($field, '=', input($field))
+                            ->execute()->fetch();
                         if ($check) {
                             $this->addError($field . ' is already taken.');
                         }
@@ -104,12 +102,14 @@ class Validation extends Model
 
     public function errors()
     {
-        return $this->_errors;
+        $errors = $this->_errors;
+        $this->_errors = [];
+        return $errors;
     }
 
     public function fails()
     {
-        if (! empty($this->_errors)) {
+        if (!empty($this->_errors)) {
             $_SESSION['form_errors_validation'] = $this->errors();
         }
         return !$this->_passed;

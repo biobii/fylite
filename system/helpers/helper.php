@@ -11,7 +11,7 @@
     function abort($file, $data = [])
     {
         $path = __DIR__ . '/../../views/errors/';
-        $blade = new Blade($path, $path.'../public/storage/cache');
+        $blade = new Blade($path, $path . '../public/storage/cache');
 
         echo $blade->make($file, $data);
     }
@@ -147,7 +147,7 @@
         } else if (isset($_GET[$value])) {
             return $_GET[$value];
         }
-        
+
         return false;
     }
 
@@ -235,7 +235,7 @@
     function view($file, $data = [])
     {
         $path = __DIR__ . '/../../views/';
-        $blade = new Blade($path, $path.'../public/storage/cache');
+        $blade = new Blade($path, $path . '../public/storage/cache');
 
         echo $blade->make($file, $data);
     }

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use FYLite\Model;
+
 class User extends Model
 {
 
