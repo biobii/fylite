@@ -1,6 +1,6 @@
 ## Simple Form Validation
 
-FYLite provides simple useful form validation. Validation rules are incomplete but sufficient for some common purposes. The validation file stored in the `app/Core` directory.
+FYLite provides simple useful form validation. Validation rules are incomplete but sufficient for some common purposes. The validation file stored in the `system` directory.
 
 ## Basic Usage
 
@@ -66,15 +66,15 @@ if ($validator->fails())
 Use `old` helper for keep input value.
 
 ## Available Validation Rules
-* required - field can't be empty.
-* min - define minimum characters of field.
-* max - define maximum characters of field.
-* string - input field should be string.
-* numeric - input field should be numeric.
-* integer - input field should be integer.
-* boolean - input field should be boolean.
-* array - input field should be an array.
-* unique - filter existing data in specific table.
+* required - field can't be empty
+* min - define minimum characters of field
+* max - define maximum characters of field
+* string - input field should be string
+* numeric - input field should be numeric
+* integer - input field should be integer
+* boolean - input field should be boolean
+* array - input field should be an array
+* unique - filter existing data in specific table
 
 ## Related Documentation
 * [Controller](https://github.com/biobii/fylite/blob/master/docs/controller.md)

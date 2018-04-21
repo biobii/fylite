@@ -28,6 +28,8 @@ public function all()
 
 namespace App\Models;
 
+use FYLite\Models;
+
 class User extends Model
 {
     public function __construct()

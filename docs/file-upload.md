@@ -18,6 +18,9 @@ FYLite provides a simple file upload feature. By default upload files are placed
 
 ### Uploading File
 ```php
+// SomeController.php
+use FYLite\FileUpload;
+
 public function upload()
 {
     csrf_check(); // check csrf token
@@ -29,9 +32,11 @@ public function upload()
     // continue proccess
 }
 ```
-The first parameter in the constructor is the allowed format file (separated by commas and without spaces). The second parameter is the image size in kilobytes.
+The first parameter in the constructor is the allowed format file (separated by commas and without spaces). The second parameter is the file size in kilobytes.
 
-If the process succesfully it will return the name of file as string, and if it fails will return an error message.
+If you set specific path like the example, then you should create the folder before. In this case the file stored in `/public/storage/photos`. Make sure photos folder is exist.
+
+If the process succesfully it will return the name of file as string, and if it fails will return error messages.
 
 ## Related Documentation
 * [Controller](https://github.com/biobii/fylite/blob/master/docs/controller.md)

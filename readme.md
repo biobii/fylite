@@ -9,9 +9,9 @@ Download or clone FYLite repository, run `composer update`.
 
 Or you can install with composer.
 ```
-composer create-project --prefer-dist biobii/fylite blog
+composer create-project biobii/fylite blog
 ```
-For setup database configuration just edit file on `config/app.php`. Don't forget to set `$config['database']['connection'] = true`.
+For setup our configuration just duplicate `.env.example` to `.env`. Dont forget to set `DB_CONNECTION=true` for allow database connection.
 
 ## Documentation
 

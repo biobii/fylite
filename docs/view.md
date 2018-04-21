@@ -6,7 +6,7 @@ All views are stored in the `views` directory. For create the new view file don'
 
 ### Call view from controller
 ```php
-// some-controller.php
+// SomeController.php
 
 public function hello()
 {
