@@ -48,7 +48,7 @@ if ($validator->fails())
 ```php
 // views/login.blade.php
 
-@if (hasErrorsValidation) 
+@if (hasErrorsValidation()) 
     @foreach (getErrorsValidation() as $error)
         <li>{{ $error }}</li>
     @endforeach
